@@ -104,7 +104,7 @@ Library.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 local uitoggled = false
 UserInputService.InputBegan:Connect(
     function(io, p)
-        if io.KeyCode == Enum.KeyCode.RightControl or io.KeyCode == Enum.KeyCode.RightShift then
+        if io.KeyCode == Enum.KeyCode.K  then
             if uitoggled == false then
                 Library.Enabled = false
                 uitoggled = true
