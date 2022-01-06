@@ -1,4 +1,4 @@
-local LibName = "pa1n Hub"
+local LibName = "pa1nhub"
 _G.LibName = LibName
 
 wait()
