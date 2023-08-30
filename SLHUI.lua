@@ -98,11 +98,11 @@ if (library.theme.cursor and Drawing) then
 	end
 end
 library.ConfigSystem = function(self, name)
-	if not isfolder("!jan_Hub") then
-		makefolder("!jan_Hub");
+	if not isfolder("janina_Hub") then
+		makefolder("janina_Hub");
 	end
 	local configSystem = {};
-	configSystem.configFolder = "!jan_Hub/" .. tostring(game.Players.LocalPlayer.Name) .. "";
+	configSystem.configFolder = "janina_Hub/" .. tostring(game.Players.LocalPlayer.Name) .. "";
 	if not isfolder(configSystem.configFolder) then
 		makefolder(tostring(configSystem.configFolder));
 	end
@@ -3118,7 +3118,7 @@ library.CreateWindow = function(self, name, hidebutton)
 			return sector;
 		end;
 		pcall(function()
-			makefolder("!jan_Hub");
+			makefolder("janina_Hub");
 		end);
 		table.insert(window.Tabs, tab);
 		return tab;
