@@ -319,7 +319,7 @@
 			aa = "Error"
 		end
 		if (type == 1) then
-			IrisNotificationUserMrJack.Notify(aa, ab, ad or "rbxassetid://13241550901", {Duration=(ac or 1),TitleSettings={TextColor3=Color3.fromRGB(255, 0, 0),TextXAlignment=Enum.TextXAlignment.Right},DescriptionSettings={TextColor3=Color3.fromRGB(240, 240, 240),TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center},GradientSettings={GradientEnabled=false,SolidColor=Color3.fromRGB(255, 0, 0),Extend=true},Main={BorderColor3=Color3.fromRGB(0, 0, 0),BackgroundColor3=Color3.fromRGB(0, 0, 0),BackgroundTransparency=0.5,Rounding=false,BorderSizePixel=0}})
+			IrisNotificationUserMrJack.Notify(aa, ab, ad or "rbxassetid://14624272739", {Duration=(ac or 1),TitleSettings={TextColor3=Color3.fromRGB(255, 0, 0),TextXAlignment=Enum.TextXAlignment.Right},DescriptionSettings={TextColor3=Color3.fromRGB(240, 240, 240),TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center},GradientSettings={GradientEnabled=false,SolidColor=Color3.fromRGB(255, 0, 0),Extend=true},Main={BorderColor3=Color3.fromRGB(0, 0, 0),BackgroundColor3=Color3.fromRGB(0, 0, 0),BackgroundTransparency=0.5,Rounding=false,BorderSizePixel=0}})
 		elseif (type == 2) then
 			IrisNotificationUserMrJack.WallNotification(aa, ab, {Duration=(ac or 1),TitleSettings={Enabled=true,TextColor3=Color3.fromRGB(255, 0, 0)},DescriptionSettings={Font=Enum.Font.Code}})
 		end
