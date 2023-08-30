@@ -3477,7 +3477,7 @@ if not game:GetService("CoreGui"):FindFirstChild("Credit") then
 	TexT.TextScaled = true;
 	TexT.TextWrapped = true;
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/IDK/main/Notification"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xpa1n/library/main/slhUInotification.lua"))();
 wait();
 Notification(1, "Janina Hub", "Executed!", 10);
 wait();
