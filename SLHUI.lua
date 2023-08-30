@@ -3479,7 +3479,7 @@ if not game:GetService("CoreGui"):FindFirstChild("Credit") then
 end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/IDK/main/Notification"))();
 wait();
-Notification(1, "SmellLikehacker Hub", "Executed!", 10);
+Notification(1, "Janina Hub", "Executed!", 10);
 wait();
-Notification(1, "SmellLikehacker Hub", "Toggle Gui With (Menu Button , Insert Button)", 10);
+Notification(1, "Janina Hub", "Toggle Gui With (Menu Button , Insert Button)", 10);
 return library;
