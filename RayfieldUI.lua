@@ -2427,12 +2427,9 @@ end)
 Topbar.Hide.MouseButton1Click:Connect(function()
 	if Debounce then return end
 	if Hidden then
-		Hidden = false
-		Minimised = false
-		Unhide()
+		RayfieldLibrary:Destroy()
 	else
-		Hidden = true
-		Hide()
+		RayfieldLibrary:Destroy()
 	end
 end)
 
