@@ -118,7 +118,6 @@ local Rayfield = game:GetObjects("rbxassetid://10804731440")[1]
 
 Rayfield.Enabled = false
 
-
 if CoreGui:FindFirstChild("RobloxGui") then
 	Rayfield.Parent = CoreGui:FindFirstChild("RobloxGui")
 else
@@ -2427,9 +2426,12 @@ end)
 Topbar.Hide.MouseButton1Click:Connect(function()
 	if Debounce then return end
 	if Hidden then
-		RayfieldLibrary:Destroy()
+		Hidden = false
+		Minimised = false
+		Unhide()
 	else
-		RayfieldLibrary:Destroy()
+		Hidden = true
+		Hide()
 	end
 end)
 
