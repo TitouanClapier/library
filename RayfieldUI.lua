@@ -1,15 +1,3 @@
---[[
-
-Rayfield Interface Suite
-by Sirius
-
-shlex | Designing + Programming
-iRay  | Programming
-
-]]
-
-
-
 local Release = "Beta 8"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
@@ -2413,26 +2401,11 @@ function RayfieldLibrary:Destroy()
 end
 
 Topbar.ChangeSize.MouseButton1Click:Connect(function()
-	if Debounce then return end
-	if Minimised then
-		Minimised = false
-		Maximise()
-	else
-		Minimised = true
-		Minimise()
-	end
+	RayfieldLibrary:Destroy()
 end)
 
 Topbar.Hide.MouseButton1Click:Connect(function()
-	if Debounce then return end
-	if Hidden then
-		Hidden = false
-		Minimised = false
-		Unhide()
-	else
-		Hidden = true
-		Hide()
-	end
+	RayfieldLibrary:Destroy()
 end)
 
 UserInputService.InputBegan:Connect(function(input, processed)
