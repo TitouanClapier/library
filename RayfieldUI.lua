@@ -1,3 +1,5 @@
+------- close button closes the gui
+
 local Release = "Beta 8"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
@@ -105,6 +107,7 @@ local CoreGui = game:GetService("CoreGui")
 local Rayfield = game:GetObjects("rbxassetid://10804731440")[1]
 
 Rayfield.Enabled = false
+
 
 if CoreGui:FindFirstChild("RobloxGui") then
 	Rayfield.Parent = CoreGui:FindFirstChild("RobloxGui")
@@ -2401,7 +2404,14 @@ function RayfieldLibrary:Destroy()
 end
 
 Topbar.ChangeSize.MouseButton1Click:Connect(function()
-	RayfieldLibrary:Destroy()
+	if Debounce then return end
+	if Minimised then
+		Minimised = false
+		Maximise()
+	else
+		Minimised = true
+		Minimise()
+	end
 end)
 
 Topbar.Hide.MouseButton1Click:Connect(function()
