@@ -1,4 +1,14 @@
-------- close button closes the gui
+--[[
+
+Rayfield Interface Suite
+by Sirius
+
+shlex | Designing + Programming
+iRay  | Programming
+
+]]
+
+
 
 local Release = "Beta 8"
 local NotificationDuration = 6.5
@@ -2415,7 +2425,15 @@ Topbar.ChangeSize.MouseButton1Click:Connect(function()
 end)
 
 Topbar.Hide.MouseButton1Click:Connect(function()
-	RayfieldLibrary:Destroy()
+	if Debounce then return end
+	if Hidden then
+		Hidden = false
+		Minimised = false
+		Unhide()
+	else
+		Hidden = true
+		Hide()
+	end
 end)
 
 UserInputService.InputBegan:Connect(function(input, processed)
