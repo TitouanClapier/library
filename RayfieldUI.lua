@@ -2425,15 +2425,7 @@ Topbar.ChangeSize.MouseButton1Click:Connect(function()
 end)
 
 Topbar.Hide.MouseButton1Click:Connect(function()
-	if Debounce then return end
-	if Hidden then
-		Hidden = false
-		Minimised = false
-		Unhide()
-	else
-		Hidden = true
-		Hide()
-	end
+	RayfieldLibrary:Destroy()
 end)
 
 UserInputService.InputBegan:Connect(function(input, processed)
