@@ -227,6 +227,8 @@ function MainScript()
                     wait(2)
                     local args = {[1] = game:GetService("Players").LocalPlayer}
                     game:GetService("ReplicatedStorage").ReplicatedStorage.Packages.Knit.Services.DungeonService.RF.TeleportToLobby:InvokeServer(unpack(args))
+                    VoteOn:InvokeServer("Retry")
+                    StartDungeon:InvokeServer()
                 end
             end
             pcall(function()
