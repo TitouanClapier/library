@@ -52,13 +52,13 @@ function MainScript()
 
     --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
     local Tabs = {
-        dungeon = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
-        mastery = Window:AddTab({ Title = "Mastery", Icon = "star" }),
-        lobby = Window:AddTab({ Title = "Lobby", Icon = "users" }),
-        autoselltab = Window:AddTab({ Title = "Auto Sell", Icon = "dollar-sign" }),
-        misc = Window:AddTab({ Title = "Misc", Icon = "chevron-right" }),
-        credits = Window:AddTab({ Title = "Credits", Icon = "info" }),
-        Settings = Window:AddTab({ Title = "UI Settings", Icon = "settings" })
+        dungeon = Window:AddTab({ Title = "Dungeon", Icon = "swords" })--,
+        --mastery = Window:AddTab({ Title = "Mastery", Icon = "star" }),
+        --lobby = Window:AddTab({ Title = "Lobby", Icon = "users" }),
+        --autoselltab = Window:AddTab({ Title = "Auto Sell", Icon = "dollar-sign" }),
+        --misc = Window:AddTab({ Title = "Misc", Icon = "chevron-right" }),
+        --credits = Window:AddTab({ Title = "Credits", Icon = "info" }),
+        --Settings = Window:AddTab({ Title = "UI Settings", Icon = "settings" })
     }
     
     do
