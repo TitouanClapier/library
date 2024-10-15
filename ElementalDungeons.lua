@@ -1108,13 +1108,13 @@ function MainScript()
             end
     
             if equippedelement == nil then 
-                Tabs.mastery:AddParagraph({Title = "You don't have an element!"})
-                Tabs.mastery:AddParagraph({Title = "Get an Element First and Rejoin/Re-execute"})
+                Tabs.dungeon:AddParagraph({Title = "You don't have an element!"})
+                Tabs.dungeon:AddParagraph({Title = "Get an Element First and Rejoin/Re-execute"})
             end
 
             if equippedelement ~= nil then 
 
-                local AutoMasteryToggle = Tabs.mastery:AddToggle("AutoMastery", {Title = "⭐  Auto Use All Abilities", Default = Settings.Mastery or false})
+                local AutoMasteryToggle = Tabs.dungeon:AddToggle("AutoMastery", {Title = "⭐  Auto Use All Abilities", Default = Settings.Mastery or false})
         
                 AutoMasteryToggle:OnChanged(function()
                     Settings.Mastery = AutoMasteryToggle.Value
@@ -1183,7 +1183,7 @@ function MainScript()
                     end)
                 end
         
-                local UseElementSkillsOr = Tabs.mastery:AddSection("Or")
+                local UseElementSkillsOr = Tabs.dungeon:AddSection("Or")
 
                 local abilitiesFolder = game:GetService("ReplicatedStorage").ReplicatedStorage.Abilities.Elements[equippedelement]:GetChildren()
 
@@ -1193,7 +1193,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[1].Name
                         
-                    local SkillToggle1 = Tabs.mastery:AddToggle("SkillToggle1", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle1 = Tabs.dungeon:AddToggle("SkillToggle1", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle1:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle1.Value
@@ -1249,7 +1249,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[2].Name
                         
-                    local SkillToggle2 = Tabs.mastery:AddToggle("SkillToggle2", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle2 = Tabs.dungeon:AddToggle("SkillToggle2", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle2:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle2.Value
@@ -1304,7 +1304,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[3].Name
                         
-                    local SkillToggle3 = Tabs.mastery:AddToggle("SkillToggle3", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle3 = Tabs.dungeon:AddToggle("SkillToggle3", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle3:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle3.Value
@@ -1360,7 +1360,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[4].Name
                         
-                    local SkillToggle4 = Tabs.mastery:AddToggle("SkillToggle4", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle4 = Tabs.dungeon:AddToggle("SkillToggle4", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle4:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle4.Value
@@ -1416,7 +1416,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[5].Name
                         
-                    local SkillToggle5 = Tabs.mastery:AddToggle("SkillToggle5", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle5 = Tabs.dungeon:AddToggle("SkillToggle5", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle5:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle5.Value
@@ -1474,7 +1474,7 @@ function MainScript()
     
                     local ability = abilitiesFolder[6].Name
                         
-                    local SkillToggle6 = Tabs.mastery:AddToggle("SkillToggle6", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
+                    local SkillToggle6 = Tabs.dungeon:AddToggle("SkillToggle6", {Title = "Use " .. ability, Default = Settings["Skill" .. ability] or false})
            
                     SkillToggle6:OnChanged(function()
                         Settings["Skill" .. ability] = SkillToggle6.Value
@@ -1530,7 +1530,7 @@ function MainScript()
 
             end
 
-        local Snipe = Tabs.lobby:AddSection("Snipe")
+        local Snipe = Tabs.dungeon:AddSection("Snipe")
 
         Snipe:AddButton({
             Title = "Open Merchant UI",
@@ -1612,7 +1612,7 @@ function MainScript()
             end
         end))
 
-        local Stats = Tabs.lobby:AddSection("Stats")
+        local Stats = Tabs.dungeon:AddSection("Stats")
 
         local UpgradeSwordPower = Stats:AddToggle("UpgradeSwordPower", {Title = "Auto Upgrade Sword Power", Default = Settings.USP or false})
 
@@ -1665,7 +1665,7 @@ function MainScript()
             end
         end))
 
-        local Summon = Tabs.lobby:AddSection("Summon")
+        local Summon = Tabs.dungeon:AddSection("Summon")
 
         local SummonElement1 = Summon:AddToggle("SummonElement1", {Title = "Auto Summon Element (1)", Default = Settings.Summon1 or false})
 
@@ -1697,7 +1697,7 @@ function MainScript()
             end
         end))
 
-        local lobbyother = Tabs.lobby:AddSection("Other")
+        local lobbyother = Tabs.dungeon:AddSection("Other")
 
         lobbyother:AddButton({
             Title = "Redeem All Codes",
@@ -1790,9 +1790,9 @@ function MainScript()
 
         lobbyother:AddParagraph({Title = "You can collect each chest just once per account!"})
 
-        Tabs.autoselltab:AddParagraph({Title = "Only works in lobby! (Does not sell equipped/locked items)"})
+        Tabs.dungeon:AddParagraph({Title = "Only works in lobby! (Does not sell equipped/locked items)"})
 
-        local TpLobbyFullItem = Tabs.autoselltab:AddToggle("TpLobbyFullItem", {Title = "Teleport to Lobby if Inventory is Full", Default = Settings.TpLobbySellItem or false})
+        local TpLobbyFullItem = Tabs.dungeon:AddToggle("TpLobbyFullItem", {Title = "Teleport to Lobby if Inventory is Full", Default = Settings.TpLobbySellItem or false})
 
         TpLobbyFullItem:OnChanged(function()
             Settings.TpLobbySellItem = TpLobbyFullItem.Value
@@ -1916,7 +1916,7 @@ function MainScript()
         ----------------------------------------------
         ----------------------------------------------
 
-        local SellWeapons = Tabs.autoselltab:AddSection("⚔️ Sell Weapons ⚔️")
+        local SellWeapons = Tabs.dungeon:AddSection("⚔️ Sell Weapons ⚔️")
 
         local SellWeapon1Toggle = SellWeapons:AddToggle("SellWeapon1Toggle", {Title = "⚔️  Sell Common Weapons", Default = Settings.SellWeapon1 or false})
 
@@ -1983,7 +1983,7 @@ function MainScript()
             end
         end))
 
-        local SellArmors = Tabs.autoselltab:AddSection("⚙️ Sell Armors ⚙️")
+        local SellArmors = Tabs.dungeon:AddSection("⚙️ Sell Armors ⚙️")
 
         local SellArmor1Toggle = SellArmors:AddToggle("SellArmor1Toggle", {Title = "⚙️  Sell Common Armors", Default = Settings.SellArmor1 or false})
 
@@ -2037,7 +2037,7 @@ function MainScript()
             end
         end))
 
-        local SellRelics = Tabs.autoselltab:AddSection("⚜️ Sell Relics ⚜️")
+        local SellRelics = Tabs.dungeon:AddSection("⚜️ Sell Relics ⚜️")
 
         local SellRelic1Toggle = SellRelics:AddToggle("SellRelic1Toggle", {Title = "⚜️  Sell Common Relics", Default = Settings.SellRelic1 or false})
 
@@ -2078,7 +2078,7 @@ function MainScript()
             end
         end))
 
-        local SellElements = Tabs.autoselltab:AddSection("⛰️ Sell Elements ⛰️")
+        local SellElements = Tabs.dungeon:AddSection("⛰️ Sell Elements ⛰️")
 
         local SellOrb1Toggle = SellElements:AddToggle("SellOrb1Toggle", {Title = "⛰️  Sell Rare Elements", Default = Settings.SellOrb1 or false})
 
@@ -2106,7 +2106,7 @@ function MainScript()
             end
         end))
 
-        local loadsection = Tabs.misc:AddSection("Load")
+        local loadsection = Tabs.dungeon:AddSection("Load")
 
         function autoloadscript()
             queue_on_teleport("repeat task.wait() until game:IsLoaded() print('aaaaaaaaaaaaaaaaaaaaa') task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/xpa1n/Scripts/main/ElementalDungeons.lua'))()")
@@ -2173,7 +2173,7 @@ function MainScript()
             if Settings.antiafkk then antiafkfunc() end
         end)
 
-        local mixc = Tabs.misc:AddSection("Miscellaneous")
+        local mixc = Tabs.dungeon:AddSection("Miscellaneous")
         
         local flying = false
         local flightEnabled = false
@@ -2553,9 +2553,9 @@ function MainScript()
         end))
 
 
-        Tabs.credits:AddParagraph({Title = "Script is made by pa1n#8015", Content = "Thanks a lot to ArponAG & MSDOS for help with some features!"})
+        Tabs.dungeon:AddParagraph({Title = "Script is made by pa1n#8015", Content = "Thanks a lot to ArponAG & MSDOS for help with some features!"})
 
-        local disc = Tabs.credits:AddSection("Discord")
+        local disc = Tabs.dungeon:AddSection("Discord")
 
         disc:AddButton({
             Title = "Join Discord!",
@@ -2593,7 +2593,7 @@ function MainScript()
 
         disc:AddParagraph({Title = "Join discord to request new features and report bugs!"})
 
-        local infox = Tabs.credits:AddSection("Info")
+        local infox = Tabs.dungeon:AddSection("Info")
 
         infox:AddParagraph({Title = "Adding more features soon ;)"})
 
@@ -2674,7 +2674,7 @@ function MainScript()
         end))
      -------- INTERFACE SETTINGS
 
-        local interfacesection = Tabs.Settings:AddSection("Interface")
+        local interfacesection = Tabs.dungeon:AddSection("Interface")
 
        ---Settings = {Theme = "Darker", Acrylic = false, Transparency = false, MenuKeybind = "K"}
         Settings.Theme = Settings.Theme or "Darker"
