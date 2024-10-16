@@ -2116,7 +2116,7 @@ function MainScript()
             if Settings.autoload then autoloadscript() end
         end))
 
-        local autoloadscripttoggle = loadsection:AddToggle("autoloadscripttoggle", {Title = "Auto Load Script", Default = Settings.autoload or false})
+        local autoloadscripttoggle = autofarmsettings:AddToggle("autoloadscripttoggle", {Title = "Auto Load Script", Default = Settings.autoload or false})
 
         autoloadscripttoggle:OnChanged(function()
             Settings.autoload = autoloadscripttoggle.Value
@@ -2142,7 +2142,7 @@ function MainScript()
             if Settings.autorejoinifkicked then autoreifkicked() end
         end))
 
-        local autojoinifkicked = loadsection:AddToggle("autojoinifkicked", {Title = "Auto Rejoin If Kicked", Default = Settings.autorejoinifkicked or false})
+        local autojoinifkicked = autofarmsettings:AddToggle("autojoinifkicked", {Title = "Auto Rejoin If Kicked", Default = Settings.autorejoinifkicked or false})
 
         autojoinifkicked:OnChanged(function()
             Settings.autorejoinifkicked = autojoinifkicked.Value
@@ -2165,7 +2165,7 @@ function MainScript()
             if Settings.antiafkk then antiafkfunc() end
         end))
 
-        local antiafktoggle = loadsection:AddToggle("antiafktoggle", {Title = "Anti-AFK", Default = Settings.antiafkk or false})
+        local antiafktoggle = autofarmsettings:AddToggle("antiafktoggle", {Title = "Anti-AFK", Default = Settings.antiafkk or false})
 
         antiafktoggle:OnChanged(function()
             Settings.antiafkk = antiafktoggle.Value
